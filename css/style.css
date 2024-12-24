@@ -1,0 +1,126 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #090e45;
+}
+
+.container {
+    max-width: 1000px;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.cards-top, .cards-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    max-width: 300px;
+    min-height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 20px 20px;
+    box-shadow: 0px 0px 9px -1px #fff;
+    position: relative;
+    transition: transform 0.3s ease;
+    border: none;
+    border-radius: 5px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card:hover .pass {
+    display: initial;
+}
+
+.top {
+    display: flex;
+    line-height: 1em;
+    .rate {
+        color: #dcdcdc;
+        span {
+            color: #65df02;
+            font: bold 2em Arial;
+        }
+    }
+}
+.icon {
+    border: 3px solid black;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-weight: bold;
+    background-color: #fff;
+    box-shadow: 0px 0px 9px -1px #fff;
+    position: absolute;
+    top: -30px;
+    left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.stars {
+    margin-left: 70px;
+    text-align: center;
+    color: #fedd36;
+    font-size: 1.1em;
+    padding: 0 40px;
+}
+
+.content {
+    text-align: justify;
+    font: bold 1.1em Arial;
+}
+
+.pass {
+    width: 100%;
+    display: none;
+    border: 1px dashed black;
+    border-radius: 5px;
+    text-align: center;
+    padding: 6px 0 0 0;
+    margin: 10px 0;
+    font: bold 1.1em Arial;
+}
+
+button {
+    background-color: #f5ec07;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 0px 9px -1px rgba(0, 0, 0, 0.75);
+}
+
+button:hover {
+    background-color: #f0c100;
+}
+
+@media only screen and (max-width: 768px) {
+    .card {
+        flex: 1 1 100%;
+    }
+}
